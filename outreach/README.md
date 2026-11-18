@@ -85,3 +85,14 @@ npm test
 ```
 
 `tests/core.test.js` covers the logic. `tests/flow.test.js` runs the real Apps Script files against an in-memory fake sheet, fake Gmail and fake Claude: drafting, duplicates, claiming, the per-run limit, the send and reply sync, threaded follow-ups and the digest. Tests never touch a real sheet, inbox or the Claude API.
+
+## Demo
+
+`demo/index.html` is a clickable walk-through with made-up rows. It runs the same logic as `Core.js`, with Gmail and Claude simulated. To view it locally:
+
+```
+cd outreach/demo
+python3 -m http.server 8080
+```
+
+Then open http://localhost:8080.
